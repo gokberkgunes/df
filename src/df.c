@@ -231,7 +231,7 @@ main(int argc, char* argv[])
 	for (int i = 1; i < argc; ++i)
 		if (!strcmp(argv[i], "-B") && argv[i + 1] &&
 		    *argv[i + 1] != '\0') {
-			fprintf(stderr, "%s isn not implemented.\n", argv[i]);
+			fprintf(stderr, "%s is not implemented.\n", argv[i]);
 			/* TODO */
 			++i;
 			continue;
@@ -241,7 +241,7 @@ main(int argc, char* argv[])
 			++i;
 			continue;
 		} else
-			fprintf(stderr, "%s isn not implemented.\n", argv[i]);
+			fprintf(stderr, "%s is not implemented.\n", argv[i]);
 
 	/* get data */
 	int n_mnted = count_mnted_disks();
