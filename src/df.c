@@ -73,14 +73,13 @@ int
 isdisk(char *str)
 {
 	int len = strlen(str);
-	const char prepath[] = "/dev/", sata[] = "sd", nvme[] = "nv";
 	int i = 0;
 
 	for (; i < 5; ++i) /* is first five /dev/ */
-		if (str[i] != prepath[i])
+		if (str[i] != "/dev/"[i])
 			return 0;
 	for (; i < 7; ++i) /* is the rest either sd or nv */
-		if (str[i] != sata[i-5] && str[i] != nvme[i-5])
+		if (str[i] != "sd"[i-5] && str[i] != "nv"[i-5])
 			return 0;
 	/* last is number (sata) or last second is p (nvme) */
 	if (!isnum(str[len - 1]) && str[len - 2] != 'p')
