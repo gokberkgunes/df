@@ -35,7 +35,7 @@ typedef struct {
 	unsigned long frsize; /* fragment(block) size */
 	fsblkcnt_t blocks;    /* number of blocks */
 	fsblkcnt_t bfree;     /* number of all free blocks */
-	fsblkcnt_t bavail;    /* number of free blocks for unprivilaged */
+	fsblkcnt_t bavail;    /* number of free blocks for unprivileged */
 } diskinfo;
 
 
@@ -107,10 +107,10 @@ count_mnted_disks(void)
 	return n_mnted;
 }
 
-/* This function takes a staticly sizes array `disks` and its length `ndisk`;
+/* This function takes a statically sized array `disks` with its length `ndisk`;
  * by knowing its length, calculation can be stopped when there is no memory
  * left to store more information.
- * This function will update the ncopy variable to be sure somehow avaliable
+ * This function will update the `ndisk` variable to be sure somehow available
  * disks did not get smaller than initial value during the computation.
  */
 void
