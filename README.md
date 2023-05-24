@@ -1,11 +1,10 @@
 # df
-this program reports disk information in terms of sizes; it is a simple and
-small reimplementation of well known sstandart unix command df.
+this program reports disk information in terms of sizes; it is a simple 
+reimplementation of well known standart unix command df.
 
-## 
 - reports only physical disks
 - all static memory (no dynamic memory allocation)
-- only integer arithmetic (no floating point artihmetic)
+- only integer arithmetic (no floating point arithmetic)
 
 ## Usage
 Currently, there is only one argument is accepted by the program.
