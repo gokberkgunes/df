@@ -2,7 +2,10 @@
 this program reports disk information in terms of sizes; it is a simple and
 small reimplementation of well known sstandart unix command df.
 
-df tries to only report sata and nvme disks to the user
+## 
+- reports only physical disks
+- all static memory (no dynamic memory allocation)
+- only integer arithmetic (no floating point artihmetic)
 
 ## Usage
 Currently, there is only one argument is accepted by the program.
